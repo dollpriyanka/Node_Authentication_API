@@ -12,6 +12,7 @@ form.addEventListener("submit", function (event) {
     }).then(response => response.json())
         .then(response => {
             window.localStorage.setItem('token', response.token)
+            window.location.href = "http://localhost:3000/reset"
         })
         .catch(e => console.log(e))
 })
